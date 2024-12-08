@@ -1,0 +1,313 @@
+ @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Open+Sans:wght@400;600;800&family=Orbitron:wght@500&family=Oxygen&family=Roboto:wght@300&family=Titillium+Web:wght@300&display=swap');
+
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+ }
+
+ html {
+      font-size: 62.5%;
+ }
+
+ body {
+      width: 100%;
+      height: 100vh;
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      overflow: hidden;
+      background: linear-gradient(rgb(28, 153, 173), rgb(82, 214, 104));
+      transition-duration: .3s;
+
+      .container {
+           width: 100%;
+           height: 100%;
+           font-family: 'Roboto', sans-serif;
+           overflow: hidden;
+
+           .nav {
+                padding: 2rem 2rem;
+                width: 100%;
+                height: 3rem;
+                overflow: hidden;
+                color: #121111;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.8rem;
+                z-index: 2;
+
+                .menu-button {
+                     width: 2.5rem;
+                     height: 2.5rem;
+                     background-color: transparent;
+                     border-top: .6rem solid #fff;
+                     border-bottom: .6rem solid #fff;
+                     cursor: pointer;
+
+                     &::before {
+                          width: 2rem;
+                          margin-top: .4rem;
+                          height: .6rem;
+                          background-color: #fff;
+                          content: '';
+                          position: absolute;
+                     }
+                }
+
+                .menu {
+                     transition-duration: .3s;
+                     position: fixed;
+                     width: 100%;
+                     height: 100%;
+                     background-color: lightblue;
+                     top: 100%;
+                     left: 0;
+                     margin-top: 4rem;
+                     padding: 0 2rem;
+                     display: flex;
+                     flex-direction: column;
+                     gap: 1rem;
+                     justify-content: center;
+                     font-size: 1.7rem;
+
+                     div {
+                          padding: 1rem;
+                          text-align: center;
+                          background-color: #fff;
+                          border-radius: 2rem;
+                          line-height: 2.5rem;
+
+                          p {
+                               font-size: 1.6rem;
+                          }
+
+                          a {
+                               text-decoration: none;
+                          }
+                     }
+
+                     .social-link {
+                          a {
+                               text-transform: capitalize;
+                               font-weight: 600;
+
+                               &:not(:first-child) {
+                                    margin-left: 1rem;
+                               }
+                          }
+
+                          a:nth-child(2) {
+                               color: #0e35ac;
+                          }
+
+                          a:nth-child(3) {
+                               color: rgb(210, 2, 127);
+                          }
+
+                          :nth-child(4) {
+                               color: #19e;
+                          }
+
+                          :nth-child(5) {
+                               color: green;
+                          }
+                     }
+
+                     .contact {
+                          a {
+                               font-size: 1.5rem;
+                               color: #121111;
+                               font-weight: 600;
+                          }
+                     }
+
+                }
+
+                .menu-active {
+                     top: 0;
+                }
+
+
+                .select-city {
+                     .default-option {
+                          width: 2.5rem;
+                          height: 2.5rem;
+                          background-color: #fff;
+                          border-radius: 50%;
+                          overflow: hidden;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          cursor: pointer;
+
+                          &::before {
+                               width: .5rem;
+                               height: 1.8rem;
+                               background-color: #393939;
+                               content: '';
+                               position: absolute;
+                               transform: rotate(90deg);
+                          }
+
+                          &::after {
+                               width: .5rem;
+                               height: 1.8rem;
+                               background-color: #393939;
+                               content: '';
+                               position: absolute;
+                          }
+
+                     }
+
+                     .city-options {
+                          position: fixed;
+                          transition-duration: .3s;
+                          height: 100%;
+                          background-color: rgba(4, 4, 4, 0.792);
+                          display: none;
+                          flex-direction: column;
+                          justify-content: center;
+                          align-items: center;
+                          width: 100%;
+                          left: 0;
+                          margin-top: 1rem;
+                          padding: 0 5rem;
+
+                          .city-option-cls-btn {
+                               background-color: #fff;
+                               width: 3rem;
+                               height: 3rem;
+                               text-align: end;
+                               display: flex;
+                               justify-content: center;
+                               align-items: center;
+                               padding: 0 2rem;
+                               border-top-left-radius: 2rem;
+                               border-top-right-radius: 2rem;
+                               align-self: flex-end;
+                               cursor: pointer;
+                               box-shadow: -.1rem .1rem .5rem .1rem #c3c1c194;
+
+                               &::before {
+                                    width: .4rem;
+                                    height: 1.8rem;
+                                    background-color: #fe9797;
+                                    content: '';
+                                    position: absolute;
+                                    transform: rotate(45deg);
+                               }
+
+                               &::after {
+                                    width: .4rem;
+                                    height: 1.8rem;
+                                    background-color: #fe9797;
+                                    content: '';
+                                    position: absolute;
+                                    transform: rotate(-45deg);
+                               }
+
+                               &:hover {
+
+                                    &::before,
+                                    &::after {
+                                         background-color: #393939;
+                                    }
+                               }
+
+                          }
+
+                          .option {
+                               background-color: #fff;
+                               width: 100%;
+                               padding: 1rem;
+                               box-shadow: -.1rem .2rem .5rem .1rem #c3c1c194;
+
+                               &:nth-child(2) {
+                                    border-top-left-radius: 2rem;
+                               }
+
+                               &:last-child {
+                                    border-bottom-left-radius: 2rem;
+                                    border-bottom-right-radius: 2rem;
+                               }
+
+                               &:hover {
+                                    background-color: #f1f1f1;
+                                    cursor: pointer;
+                               }
+                          }
+                     }
+
+                     .city-option-active {
+                          display: flex;
+                     }
+                }
+
+                .logo {
+                     font-size: 2rem;
+                     color: #fff;
+                     opacity: 70%;
+                }
+           }
+
+           .main-sec {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+                gap: 5rem;
+
+                .head-city-name {
+                     font-size: 5rem;
+                     margin-top: 4rem;
+                     color: #fff;
+                }
+
+                .temp {
+                     display: flex;
+                     font-size: 1.7rem;
+                     gap: 1rem;
+                     align-items: center;
+                     color: #fff;
+                     text-align: center;
+
+                     .temp-min,
+                     .temp-max {
+                          opacity: 50%;
+                     }
+
+                     .temp-nor {
+                          font-size: 10rem;
+                          font-weight: 800;
+                     }
+
+                }
+
+                .feels-like {
+                     color: #fff;
+                     font-size: 2rem;
+                     opacity: 90%;
+                }
+                .ws{
+                    font-size: 2rem;
+                    color: #fff;
+                }
+
+                .day {
+                     font-size: 5rem;
+                     color: #fff;
+                     font-family: 'Orbitron', sans-serif;
+                }
+
+                .t-and-d {
+                     display: flex;
+                     color: #fff;
+                     gap: 2rem;
+                     font-size: 3rem;
+                }
+           }
+      }
+ }

@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Open+Sans:wght@400;600;800&family=Orbitron:wght@500&family=Oxygen&family=Roboto:wght@300&family=Titillium+Web:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  background: linear-gradient(rgb(28, 153, 173), rgb(82, 214, 104));
+  transition-duration: 0.3s;
+}
+body .container {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+body .container .nav {
+  padding: 2rem 2rem;
+  width: 100%;
+  height: 3rem;
+  overflow: hidden;
+  color: #121111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+  z-index: 2;
+}
+body .container .nav .menu-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border-top: 0.6rem solid #fff;
+  border-bottom: 0.6rem solid #fff;
+  cursor: pointer;
+}
+body .container .nav .menu-button::before {
+  width: 2rem;
+  margin-top: 0.4rem;
+  height: 0.6rem;
+  background-color: #fff;
+  content: "";
+  position: absolute;
+}
+body .container .nav .menu {
+  transition-duration: 0.3s;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: lightblue;
+  top: 100%;
+  left: 0;
+  margin-top: 4rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  font-size: 1.7rem;
+}
+body .container .nav .menu div {
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 2rem;
+  line-height: 2.5rem;
+}
+body .container .nav .menu div p {
+  font-size: 1.6rem;
+}
+body .container .nav .menu div a {
+  text-decoration: none;
+}
+body .container .nav .menu .social-link a {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+body .container .nav .menu .social-link a:not(:first-child) {
+  margin-left: 1rem;
+}
+body .container .nav .menu .social-link a:nth-child(2) {
+  color: #0e35ac;
+}
+body .container .nav .menu .social-link a:nth-child(3) {
+  color: rgb(210, 2, 127);
+}
+body .container .nav .menu .social-link :nth-child(4) {
+  color: #19e;
+}
+body .container .nav .menu .social-link :nth-child(5) {
+  color: green;
+}
+body .container .nav .menu .contact a {
+  font-size: 1.5rem;
+  color: #121111;
+  font-weight: 600;
+}
+body .container .nav .menu-active {
+  top: 0;
+}
+body .container .nav .select-city .default-option {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+body .container .nav .select-city .default-option::before {
+  width: 0.5rem;
+  height: 1.8rem;
+  background-color: #393939;
+  content: "";
+  position: absolute;
+  transform: rotate(90deg);
+}
+body .container .nav .select-city .default-option::after {
+  width: 0.5rem;
+  height: 1.8rem;
+  background-color: #393939;
+  content: "";
+  position: absolute;
+}
+body .container .nav .select-city .city-options {
+  position: fixed;
+  transition-duration: 0.3s;
+  height: 100%;
+  background-color: rgba(4, 4, 4, 0.792);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  left: 0;
+  margin-top: 1rem;
+  padding: 0 5rem;
+}
+body .container .nav .select-city .city-options .city-option-cls-btn {
+  background-color: #fff;
+  width: 3rem;
+  height: 3rem;
+  text-align: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  align-self: flex-end;
+  cursor: pointer;
+  box-shadow: -0.1rem 0.1rem 0.5rem 0.1rem rgba(195, 193, 193, 0.5803921569);
+}
+body .container .nav .select-city .city-options .city-option-cls-btn::before {
+  width: 0.4rem;
+  height: 1.8rem;
+  background-color: #fe9797;
+  content: "";
+  position: absolute;
+  transform: rotate(45deg);
+}
+body .container .nav .select-city .city-options .city-option-cls-btn::after {
+  width: 0.4rem;
+  height: 1.8rem;
+  background-color: #fe9797;
+  content: "";
+  position: absolute;
+  transform: rotate(-45deg);
+}
+body .container .nav .select-city .city-options .city-option-cls-btn:hover::before, body .container .nav .select-city .city-options .city-option-cls-btn:hover::after {
+  background-color: #393939;
+}
+body .container .nav .select-city .city-options .option {
+  background-color: #fff;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: -0.1rem 0.2rem 0.5rem 0.1rem rgba(195, 193, 193, 0.5803921569);
+}
+body .container .nav .select-city .city-options .option:nth-child(2) {
+  border-top-left-radius: 2rem;
+}
+body .container .nav .select-city .city-options .option:last-child {
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+body .container .nav .select-city .city-options .option:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+body .container .nav .select-city .city-option-active {
+  display: flex;
+}
+body .container .nav .logo {
+  font-size: 2rem;
+  color: #fff;
+  opacity: 70%;
+}
+body .container .main-sec {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  gap: 5rem;
+}
+body .container .main-sec .head-city-name {
+  font-size: 5rem;
+  margin-top: 4rem;
+  color: #fff;
+}
+body .container .main-sec .temp {
+  display: flex;
+  font-size: 1.7rem;
+  gap: 1rem;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+body .container .main-sec .temp .temp-min,
+body .container .main-sec .temp .temp-max {
+  opacity: 50%;
+}
+body .container .main-sec .temp .temp-nor {
+  font-size: 10rem;
+  font-weight: 800;
+}
+body .container .main-sec .feels-like {
+  color: #fff;
+  font-size: 2rem;
+  opacity: 90%;
+}
+body .container .main-sec .ws {
+  font-size: 2rem;
+  color: #fff;
+}
+body .container .main-sec .day {
+  font-size: 5rem;
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+}
+body .container .main-sec .t-and-d {
+  display: flex;
+  color: #fff;
+  gap: 2rem;
+  font-size: 3rem;
+}/*# sourceMappingURL=style.css.map */

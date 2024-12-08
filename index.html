@@ -2,14 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Build and Deploy Exercise</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Styles Link -->
+     <link rel="stylesheet" href="styles/style.css">
+     <!-- Google Font -->
+     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Open+Sans:wght@400;600;800&family=Orbitron:wght@500&family=Oxygen&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300&family=Titillium+Web:wght@300&display=swap"
+     rel="stylesheet">
+     <title>Namza</title>
 </head>
 
 <body>
-    <h3 id="para">Build and Deploy Exercise</h3>
-    <script src="script.js"></script>
+     <div class="container">
+          <div class="nav">
+               <!-- menu  -->
+               <div class="menu-button"></div>
+               <div class="menu">
+                    <div class="menu-list"> 
+                         <h3>About Today</h3>
+                         <p class="good-words"></p>
+                    </div>
+                    <div class="menu-list about">
+                         <h4>About App</h4>
+                         Design and code by <b>MP Polo</b>.I recognize the importance of respecting intellectual property rights, and any unauthorized use or reproduction of our website's content is strictly prohibited.
+                    </div>
+                    <div class="menu-list social-link">
+                         <p>You can follow and contact me on</p>
+                         <a href="http://www.facebook.com/mp.polo.balghari/">facebook</a>
+                         <a href="https://www.instagram.com/mpbalghari/">instagram</a>
+                         <a href="https://twitter.com/MpBaltistani">twitter</a>
+                         <a href="https://api.whatsapp.com/send?phone=923431889164">Whatsapp</a>
+                    </div>
+                    <div class="menu-list contact">
+                         <a href="mailto:mpalexmpalex@gmail.com">Send me your comment</a>
+                    </div>
+               </div>
+               <!-- menu end -->
+               <!-- Logo -->
+               <div class="logo">Weathermen</div>
+               <!------------------- city selection  ------------------>
+               <div class="select-city">
+                    <div class="default-option"></div>
+                    <div class="city-options">
+                         <div class="city-option-cls-btn"></div>
+                    </div>
+               </div>
+               <!------------------- city selection  end ------------------>
+          </div>
+          <div class="main-sec">
+               <div class="head-city-name">
+               </div>
+               <!-- Main temperature -->
+               <div class="temp">
+                    <div class="temp-min"></div>
+                    <div class="temp-nor"></div>
+                    <div class="temp-max"></div>
+               </div>
+               <div class="feels-like"></div>
+               <div class="ws"></div>
+               <!-- Main temperature end -->
+               <!-- time -->
+               <div class="day"></div>
+               <div class="t-and-d">
+                    <div class="time"></div>
+                    <hr>
+                    <div class="date"></div>
+               </div>
+               <!-- time end -->
+          </div>
+     </div>
+     <script src="script.js"></script>
 </body>
 
 </html>
